@@ -1,5 +1,10 @@
 --Moonsec is terrible
-local AutoFarmEnabled = getgenv().AutoFarmEnabled
+local Player = game.Players.LocalPlayer
+local AutoFarmEnabled = getgenv().BAutoFarmEnabled
+local Character = getgenv().BCharacter
+local Toggled = getgenv().BToggled
+local WaitForObject = getgenv().BWaitForObject
+local NPCS = getgenv().BNPCS
 
 while AutoFarmEnabled do
     task.wait()
@@ -22,7 +27,7 @@ while AutoFarmEnabled do
     
             repeat
                 task.wait()
-                if not Target:FindFirstChild("HumanoidRootPart") or not AutoFarm.Value or not Target:FindFirstChildOfClass("Humanoid") or Toggled then
+                if not Target:FindFirstChild("HumanoidRootPart") or not AutoFarmEnabled or not Target:FindFirstChildOfClass("Humanoid") or Toggled then
                     break
                 end
     
