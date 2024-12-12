@@ -6,6 +6,7 @@ local Toggled = getgenv().BToggled
 local WaitForObject = getgenv().BWaitForObject
 local NPCS = getgenv().BNPCS
 local TS = game:GetService("TweenService")
+local AutoFarmDistance = getgenv().autoFarmDistance
 
 while AutoFarmEnabled do
     task.wait()
