@@ -25,7 +25,7 @@ while getgenv().BAutoFarmEnabled do
         
                 repeat
                     task.wait()
-                    if not Target:FindFirstChild("HumanoidRootPart") or not getgenv().BAutoFarmEnabled or not Target:FindFirstChildOfClass("Humanoid") or getgenv().BToggled then
+                    if not Target:FindFirstChild("HumanoidRootPart") or not getgenv().BAutoFarmEnabled or not Target:FindFirstChildOfClass("Humanoid") or (getgenv().BNPCsMode and not v:FindFirstChild("Damagers")) or getgenv().BToggled then
                         break
                     end
 
